@@ -1,25 +1,25 @@
-"use client"
 import React, {useEffect, useState} from "react"
 import SuggestCorrect from './suggest-correction'
-export const GetContent = (props:any) => {
-    const [mainData , setMainData] = useState(props.data.EngOjib)
-    const [keys, setKeys] = useState(Object.keys(mainData).sort())
+const GetContent = (props:any) => {
+
+    const [mainData , setMainData] = useState(props?.data?.EngOjib)
+    const [keys, setKeys] = useState(Object?.keys(mainData)?.sort())
     const [buttonPopup, setButtonPopup] = useState(false)
     const [correctionKey, setCorrectionKey] = useState("")
     const [correctionValue, setCorrectionValue] = useState("")
     const [correctionType, setCorrectionType] = useState("")
     useEffect(()=> {
-        if(props.dicType === "OjibEng"){
-            setMainData(props.data.OjibEng)
-            setKeys(Object.keys(props.data.OjibEng).sort())
+        if(props?.dicType === "OjibEng"){
+            setMainData(props?.data?.OjibEng)
+            setKeys(Object.keys(props?.data?.OjibEng).sort())
         }
         else{
-            setMainData(props.data.EngOjib)
-            setKeys(Object.keys(props.data.EngOjib).sort())
+            setMainData(props?.data?.EngOjib)
+            setKeys(Object.keys(props?.data?.EngOjib).sort())
 
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.dicType])
+    }, [props?.dicType])
    
     
      
@@ -27,7 +27,7 @@ export const GetContent = (props:any) => {
         -1,-1,-1,-1,-1,-1,-1,-1,-1,-1
         -1,-1,-1,-1,-1,-1])
 	const findNewKeys = (key:String) => {
-			if (key[0] == props.value){
+			if (key[0] == props?.value){
 				return key
 			}
 		
@@ -35,7 +35,7 @@ export const GetContent = (props:any) => {
     const handleCorrection = (valueKey:any) => {
         setCorrectionKey(valueKey)
         setCorrectionValue(mainData[valueKey])
-        setCorrectionType(props.dicType)
+        setCorrectionType(props?.dicType)
         setButtonPopup(true)
         
     }
@@ -45,7 +45,7 @@ export const GetContent = (props:any) => {
 
         
         <div className="grid gap-x-[3rem] grid-cols-3">
-        {keys.filter(findNewKeys).map((item:any, key:any) => {
+        {keys?.filter(findNewKeys).map((item:any, key:any) => {
             // eslint-disable-next-line react/jsx-key
             return <div >
                 <button className=" text-[blue]" onClick={() => {activeKey[0] == key ? setActiveKey([-1,-1,-1,-1,-1,-1,-1,-1,-1,-1-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]) : setActiveKey([key,-1,-1,-1,-1,-1,-1,-1,-1,-1-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1])} }>{item}</button>
@@ -63,3 +63,5 @@ export const GetContent = (props:any) => {
         </div>
     )
 }
+
+export default GetContent

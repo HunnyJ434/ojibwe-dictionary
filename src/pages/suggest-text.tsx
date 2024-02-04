@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import bg from '../../public/New Bitmap Image.png'
-import {db}  from "./config/firebase-config"
+import {db}  from "./api/firebase-config"
 import {doc, updateDoc, setDoc} from "firebase/firestore"
 
 

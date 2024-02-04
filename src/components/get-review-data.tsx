@@ -1,10 +1,9 @@
-"use client"
 
 import LoginForm from "./login-form"
 import { useState } from "react"
-import {db}  from "../config/firebase-config"
+import {db}  from "../pages/api/firebase-config"
 import {doc, updateDoc, setDoc , deleteField} from "firebase/firestore"
-import approveIcon from "../../../public/approve.jpg"
+import approveIcon from "../../public/approve.jpg"
 import Image from "next/image"
 const GetReviewData =  (props:any) => {
     

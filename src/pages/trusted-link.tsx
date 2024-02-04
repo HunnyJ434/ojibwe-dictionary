@@ -1,7 +1,7 @@
 
-import GetReviewData from "./components/get-review-data"
-import LoginForm from "./components/login-form"
-import {db}  from "./config/firebase-config"
+import GetReviewData from "../components/get-review-data"
+import LoginForm from "../components/login-form"
+import {db}  from "./api/firebase-config"
 import {doc, updateDoc , collection , getDocs} from "firebase/firestore"
 
 const getData =async (value:number) => {

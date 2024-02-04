@@ -5,10 +5,10 @@ import React, { useState } from "react";
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import Image from "next/image";
-import mainIcon from "../../../public/mainIcon.png"
+import mainIcon from "../../public/mainIcon.png"
 const inter = Inter({ subsets: ['latin'] })
 
-export const Navbar = () => {
+const Navbar = () => {
     return (
         <div className={`${inter.className} flex justify-between w-[100%] h-[3.8rem] bg-[orange]`}>
 			{/* buttons */}
@@ -23,3 +23,4 @@ export const Navbar = () => {
     )
   
 } 
+export default Navbar

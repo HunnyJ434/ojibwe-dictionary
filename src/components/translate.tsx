@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Image from "next/image";
-import interSwitchIcon from "../../../public/interswtich.jpg"
-import { postData } from "../api/api"
+import interSwitchIcon from "../../public/interswtich.jpg"
+import { postData } from "../pages/api/api"
 
 
 const Translate = (props:any) => {

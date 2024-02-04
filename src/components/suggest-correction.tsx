@@ -1,6 +1,6 @@
 
 import Image from 'next/image'
-import {db}  from "../config/firebase-config"
+import {db}  from "../pages/api/firebase-config"
 import {doc ,updateDoc,  collection} from "firebase/firestore"
 import { useEffect, useState } from 'react'
     

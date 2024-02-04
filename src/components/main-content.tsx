@@ -1,11 +1,9 @@
-/* eslint-disable react/jsx-key */
-"use client";
-
 import React, { useState } from "react";
-import { GetContent } from "./get-content";
+import GetContent  from "./get-content";
 
   
-export const Content = (props:any) => {
+const Content = (props:any) => {
+	console.log(props.EngOjib["SO BIG"])
 	const [mainData, setMainData] = useState(props.EngOjib)
 	const [dicType, setDicType] = useState("EngOjib")
 	const [keys, setKeys] = useState(Object.keys(mainData).sort())
@@ -178,3 +176,4 @@ export const Content = (props:any) => {
 	);
 };
 
+export default Content
