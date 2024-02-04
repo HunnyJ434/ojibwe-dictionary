@@ -25,7 +25,7 @@ const Page =  ({ data }:any) => {
 
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const mainDataEngObjibRe:any = await getData(1)
     const mainDataObjibEngRe:any = await getData(4)
     const EngOjibCorrection:any = await getData(5)

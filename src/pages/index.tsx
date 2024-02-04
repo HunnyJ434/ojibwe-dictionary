@@ -19,7 +19,7 @@ const inter = Inter({ subsets: ['latin'] })
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const getData =async (value:number) => {
     try {
       const wordCollectionRef = collection(db, "words");

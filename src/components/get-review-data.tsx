@@ -54,14 +54,14 @@ const GetReviewData =  (props:any) => {
         <><h1>New Suggestion</h1> {OjibEngkeys.map((item:any, key:any) => {
             return (<div key={key} className={hiddenKey.includes(item)? "hidden" : "ml-3 my-1 text-[1.15rem] flex"}><div key={key}>{item}: {props.OjibEngReData[item]}</div>
                     <button className="ml-[2rem]" key={key} onClick={() => approveWord(item, "Eng-Ojib",props.EngOjibReData[item])}><Image src={approveIcon.src} width={25} height={25} alt=""></Image></button>
-                    <button  onClick={() => {disapproveWord(item, "Eng-Ojib",props.OjibEngReData[item])}} className="ml-[2rem] "><p className="text-[red] font-[red]">X</p></button>
+                    <button  onClick={() => {disapproveWord(item, "Ojib-Eng",props.OjibEngReData[item])}} className="ml-[2rem] "><p className="text-[red] font-[red]">X</p></button>
                     </div>)
                     
         } )}
         {EngOjibkeys.map((item:any, key:any) => {
             return (<div key={key} className={hiddenKey.includes(item)? "hidden" : "ml-3 my-1 text-[1.15rem] flex"}>{item}: {props.OjibEngReData[item]}
                     <button className="ml-[2rem]" key={key} onClick={() => approveWord(item, "Ojib-Eng",props.EngOjibReData[item])}><Image src={approveIcon.src} width={25} height={25} alt=""></Image></button>
-                    <button  onClick={() => {disapproveWord(item, "Ojib-Eng",props.EngOjibReData[item])}} className="ml-[2rem] "><p className="text-[red] font-[red]">X</p></button>
+                    <button  onClick={() => {disapproveWord(item, "Eng-Ojib",props.EngOjibReData[item])}} className="ml-[2rem] "><p className="text-[red] font-[red]">X</p></button>
                     </div>)
         } )}
         <h1>Text Correction</h1>
