@@ -3,7 +3,7 @@ import GetContent  from "./get-content";
 
   
 const Content = (props:any) => {
-	console.log(props.EngOjib["SO BIG"])
+
 	const [mainData, setMainData] = useState(props.EngOjib)
 	const [dicType, setDicType] = useState("EngOjib")
 	const [keys, setKeys] = useState(Object.keys(mainData).sort())
@@ -34,7 +34,7 @@ const Content = (props:any) => {
 
 
 	return (
-		<div>
+		<div >
 			
 			{/* Top buttons */}
 			<div className="flex">

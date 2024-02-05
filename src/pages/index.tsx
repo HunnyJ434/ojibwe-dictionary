@@ -12,9 +12,11 @@ const inter = Inter({ subsets: ['latin'] })
 
   
   const Home = ({ data }:any) => {
+
   return (
-    <main className={` flex min-h-screen flex-col items-center justify-between px-10`}>
-      <Content EngOjib={data[0]} OjibEng={data[1]}/>
+    <main className={` flex min-h-screen flex-col items-center justify-between px-10`} >
+      <Content EngOjib={data[0]} OjibEng={{...data[1],...data[2],...data[3]}}/>
+    
     </main>
   )
 }
@@ -32,9 +34,13 @@ export const getServerSideProps = async () => {
   };
   const EngOjib = await getData(0) 
   const OjibEng = await getData(3)
+  const OjibEng1 = await getData(5)
+  const OjibEng2 = await getData(6)
   const data = [
     EngOjib || {}, // Provide an empty object if EngOjib is null
     OjibEng || {}, // Provide an empty object if OjibEng is null
+    OjibEng1 || {},
+    OjibEng2 || {},
   ];
   // Return the data as props
   return {

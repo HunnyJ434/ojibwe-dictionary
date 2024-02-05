@@ -5,9 +5,6 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 const Page =  () => {
 
-  console.log(inter.className)
-  
-
   return (
     
     <div>
