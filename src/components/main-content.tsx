@@ -27,13 +27,15 @@ const Content = (props:any) => {
 				return key
 			}
 		}
-		let newKeys
+		
 		if(dicType == "EngOjib"){
-			newKeys = Object.keys(mainData).sort().filter(findNewKeys)
+			setMainData(props.EngOjib)
 		}
 		else{
-			newKeys = Object.keys(props.OjibEng).sort().filter(findNewKeys)
+			setMainData(props.OjibEng)
 		}
+		let newKeys = Object.keys(mainData).sort().filter(findNewKeys)
+		console.log(newKeys)
 		setKeys(newKeys)
 	}
 
