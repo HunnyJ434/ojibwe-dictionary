@@ -38,7 +38,7 @@ export default function Page() {
 		<div  className=" h-[100vh]  w-full flex justify-center " style={{backgroundImage: bg.src}}>
 		<div className="rounded-lg  w-[50%]  flex flex-col border-[1px] border-[black]">
 		<div className={`border-[1px]  border-[black] rounded-lg ml-4 mt-2 transition-all duration-1000 ${isFormSub? "opacity-100" : "border-0 opacity-0 "}`}><h1 className={`${isFormSub? "" : "hidden "}`}>Thank you, your suggestion has been recorded.</h1></div>
-		<div className="flex"><h1 className="w-[28%] pb-1 text-[orange]  duration-1000 text-3xl ml-3 border-b-[3px] mr-[-1rem] border-[orange]">Suggest Tex</h1><h1 className="m-0 animate-bounce text-3xl text-[orange]">t</h1></div>
+		<div className="flex"><h1 className="w-[28%] pb-1 text-[orange]  duration-1000 text-3xl ml-3 border-b-[3px] mr-[-0.9rem] border-[orange]">Suggest Tex</h1><h1 className="m-0 animate-bounce text-3xl text-[orange]">t</h1></div>
 		<div className="mt-[4rem] pt-[5%]">
 		<label htmlFor="contentType">Text Type:</label>
   		<select className="w-[10.5rem]" id="contentType" onChange={(e) => handleContentType(e.target.value)} name="contentType">

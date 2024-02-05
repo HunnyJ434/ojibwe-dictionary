@@ -18,7 +18,6 @@ const getData =async (value:number) => {
 }
 
 const Page =  ({ data }:any) => {
-
     return (
         <GetReviewData EngOjibReData={data[0]} OjibEngReData={data[1]} EngCorrection={data[2]} OjibCorrection={data[3]}/>
     )
@@ -28,7 +27,7 @@ const Page =  ({ data }:any) => {
 export const getServerSideProps = async () => {
     const mainDataEngObjibRe:any = await getData(1)
     const mainDataObjibEngRe:any = await getData(4)
-    const EngOjibCorrection:any = await getData(5)
+    const EngOjibCorrection:any = await getData(7)
     const OjibEngCorrection:any = await getData(2)
     const data = [mainDataEngObjibRe,mainDataObjibEngRe,EngOjibCorrection, OjibEngCorrection]
   

@@ -23,8 +23,15 @@ const Content = (props:any) => {
 			setSearchingKey(false)
 		}
 		const findNewKeys = (key:String) => {
-			if (key.includes(value.toUpperCase())){
-				return key
+			if(dicType == "EngOjib"){
+				if (key.includes(value.toUpperCase())){
+					return key
+				}
+			}
+			else{
+				if (key.includes(value.toLowerCase())){
+					return key
+				}
 			}
 		}
 		
