@@ -3,7 +3,7 @@ import GetContent  from "./get-content";
 
   
 const Content = (props:any) => {
-
+	
 	const [mainData, setMainData] = useState(props.EngOjib)
 	const [dicType, setDicType] = useState("EngOjib")
 	const [keys, setKeys] = useState(Object.keys(mainData).sort())
@@ -27,8 +27,13 @@ const Content = (props:any) => {
 				return key
 			}
 		}
-		let newKeys = Object.keys(mainData).sort().filter(findNewKeys)
-		console.log(newKeys)
+		let newKeys
+		if(dicType == "EngOjib"){
+			newKeys = Object.keys(mainData).sort().filter(findNewKeys)
+		}
+		else{
+			newKeys = Object.keys(props.OjibEng).sort().filter(findNewKeys)
+		}
 		setKeys(newKeys)
 	}
 
