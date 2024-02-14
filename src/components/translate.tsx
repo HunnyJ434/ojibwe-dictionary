@@ -29,9 +29,9 @@ const Translate = (props:any) => {
   
   return (
     <div className='w-[100%] h-[80vh] pl-[5%] py-[5%]'>
-      <div className='flex w-[100%] pl-[25%]'>
+      <div className='flex w-[100%] md:pl-[25%]'>
         <p className='mx-[5rem]'>{toggle? "Ojibwe Text" : "English Text"}</p>
-        <button onClick={() => {setToggle(!toggle)}}><img src={interSwitchIcon.src} alt="interswitch language Icon" className=" w-[2rem] h-[2rem]"></img></button>
+        <button onClick={() => {setToggle(!toggle)}}><img src={interSwitchIcon.src} alt="interswitch language Icon" className="w-[2.5rem] md:w-[2rem] md:h-[2rem]"></img></button>
         <p className='mx-[5rem]'>{toggle? "English Text" : "Ojibwe Text"}</p>
       </div>
       <div className='flex'>

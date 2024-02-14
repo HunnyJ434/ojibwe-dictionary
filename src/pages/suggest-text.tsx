@@ -5,9 +5,18 @@ import Image from "next/image";
 import bg from '../../public/New Bitmap Image.png'
 import {db}  from "./api/firebase-config"
 import {doc, updateDoc, setDoc} from "firebase/firestore"
+import Link from 'next/link'
+import burgerIcon from "../../public/hamburger.png"
+import mainIcon from "../../public/mainIcon.png"
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Page() {
+	const [toggle, setToggle] = useState(true)
+    const handleClick = () => {
+        setToggle(!toggle)
+    }
 	const [isLoading, setIsLoading] = useState(false);	
 	const [contentType, setContentType] = useState("Ojib-Eng-Review")
 	const [contentText, setContentText] = useState("")
@@ -35,10 +44,37 @@ export default function Page() {
 		setTimeout(() => {setIsFormSub(false)},5000)
 	}
 	return (
+		<div>
+			      <div className={`${inter.className} `}>
+	<div className="hidden md:flex lg:flex xl:flex flex justify-between w-[100%] h-[3.8rem] bg-[orange]">
+	<Link href="/"><Image src={mainIcon.src} alt="website Icon" width={50} height={25} className="ml-3 w-[2.5rem] h-[3.8rem]"></Image></Link>
+		
+		<div className={`${inter.className} h-[100%] flex justify-end`}>
+			<Link href="/" className={`${inter.className} py-3 mx-3`}>Word Dictionary</Link>
+			<Link href="/" className="py-3 mx-3">Sentences</Link>
+			<Link href="/translate" className="py-3 mx-3">Translator</Link>
+			<Link href="/suggest-text" className="py-3 mx-3">Suggest text</Link>
+		</div>
+		</div>
+		<div className="md:hidden ">
+    <div className="flex justify-between w-[100%] h-[3.8rem] bg-[orange]">
+        <Link href="/"><Image src={mainIcon.src} alt="website Icon" width={50} height={25} className="ml-3 w-[2.5rem] h-[3.8rem]"></Image></Link>
+      
+        <button  className={`${toggle? 'block': "hidden"} rounded-lg w-[2.5rem] h-[2rem] mr-3 mt-3`} onClick={() => setToggle(!toggle)}><Image src={burgerIcon.src} onClick={() => setToggle(!toggle)} alt="website Icon" width={50} height={25} className=" w-[2.5rem] rounded-lg h-[2.5rem]"></Image></button>
+        <div className={`${toggle? 'hidden' : "ml-[-12rem] block"} z-[100] flex flex-col w-[10rem] rounded-lg h-[16rem] bg-[orange]`}>
+        <button  className='w-[2.5rem] mt-3 rounded-lg  h-[2rem] ml-[67.5%]' onClick={() => setToggle(!toggle)}><Image src={burgerIcon.src} onClick={() => setToggle(!toggle)} alt="website Icon" width={50} height={25} className=" w-[2.5rem] rounded-lg h-[2.5rem]"></Image></button>
+        <Link href="/" className={`${inter.className} py-3 mx-3`}>Word Dictionary</Link>
+		<Link href="/" className="py-3 mx-3">Sentences</Link>
+		<Link href="/translate" className="py-3 mx-3">Translator</Link>
+		<Link href="/suggest-text" className="py-3 mx-3">Suggest text</Link>
+        </div>
+      </div>
+	</div>
+</div> 
 		<div  className=" h-[100vh]  w-full flex justify-center " style={{backgroundImage: bg.src}}>
-		<div className="rounded-lg  w-[50%]  flex flex-col border-[1px] border-[black]">
-		<div className={`border-[1px]  border-[black] rounded-lg ml-4 mt-2 transition-all duration-1000 ${isFormSub? "opacity-100" : "border-0 opacity-0 "}`}><h1 className={`${isFormSub? "" : "hidden "}`}>Thank you, your suggestion has been recorded.</h1></div>
-		<div className="flex"><h1 className="w-[28%] pb-1 text-[orange]  duration-1000 text-3xl ml-3 border-b-[3px] mr-[-0.9rem] border-[orange]">Suggest Tex</h1><h1 className="m-0 animate-bounce text-3xl text-[orange]">t</h1></div>
+		<div className="rounded-lg w-[80%] md:w-[50%]  flex flex-col border-[1px] border-[black]">
+		<div className={`border-[1px]  border-[black] rounded-lg ml-4 mt-5 md:mt-2 transition-all duration-1000 ${isFormSub? "opacity-100" : "border-0 opacity-0 "}`}><h1 className={`${isFormSub? "" : "hidden "}`}>Thank you, your suggestion has been recorded.</h1></div>
+		<div className="flex w-full"><h1 className="w-[80%] pb-1 text-[orange]  duration-1000 text-3xl ml-3 border-b-[3px] mr-[-0.9rem] border-[orange]  flex">Suggest Tex <h1 className="m-0  animate-bounce text-3xl text-[orange]">t</h1></h1></div>
 		<div className="mt-[4rem] pt-[5%]">
 		<label htmlFor="contentType">Text Type:</label>
   		<select className="w-[10.5rem]" id="contentType" onChange={(e) => handleContentType(e.target.value)} name="contentType">
@@ -65,11 +101,12 @@ export default function Page() {
     sizes="100vw"
 	objectPosition="center"
     style={{
-      objectFit: 'cover',
-      zIndex: -1
+      objectFit: 'scale-down',
+      zIndex: -1, 
     }}
 	alt=""
   />	
+		</div>
 		</div>
 	)
   }
