@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import burgerIcon from "../../public/hamburger.png"
 import mainIcon from "../../public/mainIcon.png"
-
+import Image from 'next/image'
 
 const Page =  () => {
 
