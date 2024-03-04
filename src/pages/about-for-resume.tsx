@@ -8,7 +8,7 @@ const Page =  () => {
     return (
       
       <div>
-                <div className={`${inter.className} `}>
+                <div>
 	<div className="hidden md:flex lg:flex xl:flex flex justify-between w-[100%] h-[3.8rem] bg-[orange]">
 	<Link href="/"><Image src={mainIcon.src} alt="website Icon" width={50} height={25} className="ml-3 w-[2.5rem] h-[3.8rem]"></Image></Link>
 		
