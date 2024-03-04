@@ -2,7 +2,7 @@ import Link from 'next/link'
 import burgerIcon from "../../public/hamburger.png"
 import mainIcon from "../../public/mainIcon.png"
 import Image from 'next/image'
-
+import { useState } from 'react'
 const Page =  () => {
     const [toggle, setToggle] = useState(true)
     const handleClick = () => {
