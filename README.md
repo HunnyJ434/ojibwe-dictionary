@@ -1,40 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ojibwe Dictionary
 
-## Getting Started
+The Ojibwe Dictionary is a groundbreaking project aimed at providing a comprehensive translator for the Ojibwe language. Ojibwe, also known as Anishinaabemowin or Ojibway, is an indigenous language spoken by the Ojibwe people in Canada and the United States. It is part of the Algonquian language family and has multiple dialects, with variations in vocabulary, pronunciation, and grammar.
 
-First, run the development server:
+## Features
+**Translator**: Translate text between English and Ojibwe language.
+**Machine Learning Model**: Utilizes advanced machine learning models trained on a vast dataset to ensure accurate translations.
+**Community Engagement**: Integrated Firebase with the website to empower users to contribute suggestions and corrections, enriching the linguistic resources available to the community.
 
-```bash
+## Technologies Used
+**Next.js**: Frontend development and user interface.
+**Python**: Backend development and machine learning model training.
+**Flask**: Backend API development.
+**Colab**: Collaborative environment for machine learning model training.
+**TensorFlow**: Machine learning framework for model development.
+**Google Cloud**: Deployment and hosting infrastructure.
+**Firebase**: Community engagement and content enhancement.
+
+## Installation
+To run the Ojibwe Dictionary locally, follow these steps:
+
+Clone the repository:
+
+git clone https://github.com/your_username/ojibwe-dictionary.git
+Install dependencies:
+
+cd ojibwe-dictionary
+npm install
+Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open your browser and navigate to http://localhost:3000 to access the Ojibwe Dictionary.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
+The Ojibwe Dictionary is deployed on Google Cloud, ensuring optimal performance and reliable service availability. The backend API is optimized to efficiently handle user requests, providing a seamless experience for users.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Contributing
+Contributions and feedback are welcome! If you have suggestions for improvement or would like to contribute to the project, feel free to open an issue or submit a pull request.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+This project is licensed under the MIT License.
