@@ -12,7 +12,7 @@ const Page =  () => {
 	<div className="hidden md:flex lg:flex xl:flex flex justify-between w-[100%] h-[3.8rem] bg-[orange]">
 	<Link href="/"><Image src={mainIcon.src} alt="website Icon" width={50} height={25} className="ml-3 w-[2.5rem] h-[3.8rem]"></Image></Link>
 		
-		<div className={`${inter.className} h-[100%] flex justify-end`}>
+		<div className={`h-[100%] flex justify-end`}>
 			<Link href="/" className={`${inter.className} py-3 mx-3`}>Word Dictionary</Link>
 			<Link href="/" className="py-3 mx-3">Sentences</Link>
 			<Link href="/translate" className="py-3 mx-3">Translator</Link>
