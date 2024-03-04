@@ -1,3 +1,8 @@
+import Link from 'next/link'
+import burgerIcon from "../../public/hamburger.png"
+import mainIcon from "../../public/mainIcon.png"
+
+
 const Page =  () => {
 
     return (
