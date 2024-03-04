@@ -4,7 +4,10 @@ import mainIcon from "../../public/mainIcon.png"
 import Image from 'next/image'
 
 const Page =  () => {
-
+    const [toggle, setToggle] = useState(true)
+    const handleClick = () => {
+        setToggle(!toggle)
+    }
     return (
       
       <div>
