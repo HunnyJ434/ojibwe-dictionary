@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import Image from 'next/image';
-import interSwitchIcon from '../../public/interswtich.jpg';
+import interSwitchIcon from "../../public/interswtich.jpg"
 import bg1 from '../../public/bg1.bmp';
 import { postData } from '../pages/api/api';
 
@@ -15,7 +15,7 @@ const Translate = () => {
   const handleClick = async () => {
     try {
       setIsLoading(true);
-      const newData = await postData(inputString);
+      const newData:any = await postData(inputString);
       setResultString(newData[0]);
       setResultValue(newData[1]);
     } catch (error) {
